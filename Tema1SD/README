@@ -1,0 +1,32 @@
+/*   Author 
+ * First Name: Teodor Ioan
+ * Last Name: Hossu
+ * Group: 315CB
+ */
+
+								SD - TEMA 1
+								    ATM
+
+	In order to complete this homework, I had to implement three structures, for
+the history of transactions, for the details of a card and for a list of cards
+, a bunch of macros for easier access to the fields of the card and a multitude
+of functions, like:
+	- Functions for creating a card, for finding the position in the database
+for a new card and for adding a new card to the database;
+	- A function for deleting a card from the database;
+	- Multiple functions for printing the details of the database: list of
+cards, cards, history of transactions;
+	- A function for adding a new transaction to the history of transactions of
+a card;
+	- A function for inserting a card into the ATM machine;
+	- A function for unblocking a locked card, or resetting its failed attempts
+of login;
+	- A couple functions for detecting if a string is a number and for changing
+the pin of a card;
+	- A function for returning the balance of a card;
+	- A function able to top up a card with a given ammount of money;
+	- A function for withdrawing money from a card;
+	- A function for transferring a sum of money from one card to another;
+	- A function for canceling a mistaken transfer of money;
+	- A few functions for resizing the ATM database;
+	- Functions for freeing up the used space by the ATM database.

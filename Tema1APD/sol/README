@@ -1,0 +1,17 @@
+	Am preluat codul de la functiile de creare a matricelor julia si mandlebrot, si
+cel din main, si le-am pus in functia my_function, care paralelizeaza calculul
+si afisarea matricelor prin intermediul barierelor. Functia contine 5 barierelor
+astfel:
+	-prima in interiorul functiei julia, dupa crearea indicilor start/end;
+	-a 2-a dupa calcularea matricei julia;
+	-a 3-a dupa afisarea in output a matricei jula;
+	-a 4-a in interiorul functiei mandlebrot, dupa crearea indicilor start/end;
+	-si a 5-a dupa calcularea matricei mandlebrot.
+	Acestea ajuta thread-urile sa se astepte unele pe celelalte, astfel incat sa
+paralelizez programul cum trebuie.
+	Alocarea matricei result si scrierea matricilor julia si mandlebrot in
+output se executa numai atunci cand se executa thread-ul 0, deoarece trebuie
+o singura data.
+	In functia get_args am adaugat citirea argumentului 5, care reprezinta
+numarul de thread-uri pe care se va executa programul. Se face convertirea din
+string in integer prin functia atoi.

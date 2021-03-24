@@ -1,0 +1,36 @@
+Rezolvarea se afla in doua fisiere, un header si un fisier sursa
+header-ul contine structurile si prototipurile functiilor folosite in program, si implementate in fisierul sursa
+
+Ai structura pentru lista de carduri, care contine legatura la primul card din submultime si la urmatoarea lista de carduri
+
+Ai structura pentru detaliile unui card, care contine si o lista de structuri de tip history
+
+am folosit macro-uri ca sa fie mai putin de scris
+
+am separat toate functiile in functie de functionalitati
+
+se parcurge input-ul si se citesc string-uri. in functie de comanda citita, citesc restul parametrilor functiei, si apelez functii care sa rezolve
+
+pentru add, intai verific daca cardul exista, daca nu exista, cresc numarul curent de carduri si verific daca am depasit dimensiunea maxima, caz in care fac redimensionarea atm-ului, apoi creez un card nou, ii calculez pozitia si il inserez la pozitia respectiva
+
+pentru delete, apelez functia
+
+pentru reverse, apelez functia care intoarce si un cod de eroare in cazul in care tranzactia nu mai poate fi inversata
+
+unblock -> apelez
+
+show, salvez pozitia curenta din fisier, apoi citesc un string. daca nu se citeste un id de card, readuc fisierul la pozitia salvata si buffer o sa fie null. apelez functia de afisare
+
+insert, apelez functia
+
+recharge, care intoarce si cod de eroare daca e o suma invalida, afisez noua balanta a cardului dupa apelul functiei
+
+withdrawal, apeleaza functie ce intoarce coduri de eroare, afiseaza balanta ramasa in card
+
+balance inquiry, apeleaza functie ce intoarce balanta cardului si o afiseaza
+
+transfer funds, apeleaza functie ce intoarce coduri de eroare, afiseaza balanta ramasa in card
+
+pin change, apeleaza functie ce intoarce cod de eroare
+
+cancel, adauga in history si scoate cardul din atm

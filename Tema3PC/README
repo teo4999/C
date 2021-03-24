@@ -1,0 +1,24 @@
+Fisierele buffer.c, buffer.h, helpers.c, helpers.h si Makefile sunt preluate
+din laboratorul 10 deoarece am observat ca acestea pot fi folositoare.
+Toate acestea, mai putin Makefile-ul, nu au fost modificate deloc.
+
+Algoritmul meu preia IP-ul server-ului, apoi se conecteaza la el, si intr-un
+while(1) executa orice comanda citita de la tastatura. Functia register
+citeste username si password de la tastatura, dupa aceea creeaza mesajul
+care trebuie transmis server-ului, si afiseaza raspunsul de la server.
+Functia login executa aceeasi pasi ca si register, doar ca in plus
+memoreaza cookie-ul transmis de server. Functia enter_library
+verifica daca clientul s-a logat, si pe baza cookie-ului,
+returneaza JWT-ul. Functia get_books returneaza o lista cu toate cartile
+care se afla in baza de date a clientului. Functia get_book returneaza
+toate detaliile despre o carte pe baza id-ului acesteia. Functia
+add_book citeste de la tastatura detaliile despre o carte noua, iar apoi
+o adauga in baza de date a clientului. Functia delete_book sterge o carte
+dupa id-ul acesteia. Functia logout deconecteaza clientul logat anterior,
+si sterge cookie-ul si JWT-ul memorate anterior. Functia exit se
+deconecteaza complet de la server si ii da break while-ului, ceea
+ce va face ca programul sa se inchida (un fel de Ctrl+C).
+
+Fiecare functie (mai putin exit) isi creeaza propriul mesaj care trebuie
+transmis server-ului. Nu am folosit nicio biblioteca pentru parsarea
+json-ului, am facut-o manual deoarece mi s-a parut mai simplu.

@@ -1,0 +1,24 @@
+Hossu Teodor-Ioan, 315CB
+
+									Tema 3
+								Linux Filesystem
+
+	Pentru implementarea temei, am implementat o structura trie de tip arbore
+si o structura pentru nodurile acestuia. Trie-ul are un nod pentru radacina
+si un nod pentru directorul curent. Nodul retine un caracter, daca este final
+de nume de fisier, urmatorul copil al nodului parinte, parintele si primul
+copil al nodului curent.
+	Parcurg comenzile date de la tastatura si citesc cati parametri are fiecare
+comanda.
+	Pentru comanda mkdir, verific ce tip de cale este, si apoi parcurg nodurile
+arborelui cat timp acestea coincid, iar apoi incerc sa creez restul nodurilor,
+daca restul caii este valida.
+	Pentru comanda cd, verific ce tip de cale este, si apoi parcurg nodurile
+arborelui pana la terminarea caii. Daca aceasta se termina, schimb nodul
+curent, altfel, inseamna ca s-a introdus o cale invalida.
+	Pentru comanda ls, parcurg nodurile arborelui incepand de la directorul
+curent pe fiecare legatura, pana cand se gaseste un caracter '/', caz in care
+afisez numele folderului, iar pe parcurs orice fisier cand se gaseste un nod
+cu flag-ul de fisier activ.
+	Pentru comanda pwd, parcurg catre root calea de la directorul curent si o
+afisez.
